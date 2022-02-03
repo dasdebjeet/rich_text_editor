@@ -13,18 +13,18 @@
     align-items: center;
 }
 
-h1 {
+.doc_h1 {
     text-align: center;
 }
 
-h3 {
+.doc_h3 {
     margin-top: 50px;
     text-align: center;
     font-size: 15px;
     font-weight: 500;
 }
 
-h3 a {
+.doc_h3 a {
     text-decoration: none;
     color: inherit;
 }

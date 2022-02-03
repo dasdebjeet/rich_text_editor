@@ -47,7 +47,7 @@
             </div>
         </div>
 
-        <h1>Rich Text Editor</h1>
+        <h1 class="doc_h1">Rich Text Editor</h1>
 
         <div class="blog_textEditorWrapper">
             <div class="blog_textEditor_toolbar">
@@ -118,7 +118,7 @@
 
         </div>
 
-        <h3>Made by <em><a href="https://github.com/Debjeet-GitHUb" style="font-family: 'Sacramento', cursive;">Debjeet Das</a></em> 💖</h3>
+        <h3 class="doc_h3">Made by <em><a href="https://github.com/Debjeet-GitHUb" style="font-family: 'Sacramento', cursive;">Debjeet Das</a></em> 💖</h3>
     </body>
 
 </html>
