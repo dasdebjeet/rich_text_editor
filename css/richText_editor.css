@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Sacramento&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    outline: none;
+}
+
+.flex_c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+h3 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog_textEditorWrapper {
+    position: relative;
+    /* width: 900px; */
+    margin: 50px auto;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+.blog_textEditor_toolbar {
+    flex-wrap: wrap;
+    background: #ffecff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* height: 20px; */
+    margin: 10px 0;
+    padding: 5px;
+    border-top: 3px solid #b378ff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 0px 3.5px #b7b7b7;
+
+}
+
+.toolbar_btn_wrap {
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.toolbar_btn_wrapSpace {
+    width: 5px;
+}
+
+.toolbar_btn {
+    position: relative;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    color: #9c00ff;
+    border: 0;
+    border-radius: 2px;
+    outline: 0;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.toolbar_btn:hover:after {
+    background: #ffecff;
+    position: absolute;
+    top: -50px;
+    content: attr(tooltip);
+    padding: 5px 15px;
+    font-size: 13px;
+    white-space: nowrap;
+    /* border: 2px solid #b378ff; */
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px #8a72a9d1;
+    z-index: 100;
+    transition: all 0.5s ease-in-out;
+}
+
+.toolbar_btn:hover:before {
+    position: absolute;
+    top: -25px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #ffecff;
+    transition: all 0.5s ease-in-out;
+    z-index: 101;
+}
+
+.insertImg_btn_dropdown {
+    display: none;
+    position: absolute;
+    bottom: -80px;
+    background: #fff;
+    width: 150px;
+    /* height: 100px; */
+    color: #9c00ff;
+    font-size: 13px;
+    border: 2px solid #b378ff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3.5px #b7b7b7;
+    z-index: 300;
+}
+
+.img_dropdown_menu {
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+.editor_container {
+    align-items: flex-start;
+    margin: 10px 0px;
+    border-bottom: 3px solid #b378ff;
+    box-shadow: 0px 0px 3.5px #b7b7b7;
+    border-radius: 5px 5px 0 0;
+}
+
+
+/* editor modal */
+
+.editor_dataModal {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #3838387a;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.imgUrl_dataModal_content,
+.createUrl_dataModal_content {
+    display: none;
+    background: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    /* height: 230px; */
+    border-radius: 5px;
+}
+
+.imgUrl_dataModal_content>div,
+.createUrl_dataModal_content>div {
+    font-weight: 600;
+}
+
+.imgUrl_dataModal_content>input,
+.createUrl_dataModal_content>input {
+    background: transparent;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #1a73e8;
+}
+
+.imgUrl_dataModal_content>p,
+.createUrl_dataModal_content>p {
+    margin: 10px 0 20px;
+    color: #5c5c5c;
+    font-size: 12px;
+    /* font-weight: 600; */
+}
+
+.insert_btns,
+.createUrl_btns {
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.insert_btns>button,
+.createUrl_btns>button {
+    background: transparent;
+    padding: 5px 20px;
+    color: #1a73e8;
+    font-weight: 600;
+    border: 1px solid #1a73e8;
+    cursor: pointer;
+}
+
+/*-- editor modal --*/
+
+
+.editor_body {
+    background: #ffecff;
+    width: 100%;
+    min-height: 310px;
+    padding: 15px 10px;
+    font-size: 15px;
+    border-top-right-radius: 5px;
+    outline: 0;
+    line-height: 20px
+}
+
+
+.lineNumber {
+    display: none;
+    background: #00060a;
+    /* width: 35px; */
+    padding: 15px 10px;
+    /* font-size: 15px; */
+    text-align: right;
+    color: #5c6c70;
+    border-right: 1px solid #1d242a;
+    border-radius: 5px 0 0 0;
+    transition: all 0.8s ease-in-out;
+}
+
+.editor_body img {
+    width: 50%;
+}
+
+.editor_body h1,
+.editor_body h2,
+.editor_body h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.editor_body ul,
+.editor_body ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+
+
+/* Media Query */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width:481px) {
+    .blog_textEditor_toolbar {
+        justify-content: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .toolbar_btn_wrap {
+        margin-right: 5px;
+    }
+
+    .toolbar_break {
+        flex-basis: 100%;
+        height: 0;
+        margin: 0 !important;
+    }
+
+    .toolbar_btn {
+        font-size: 17px
+    }
+
+    .toolbar_btn:hover:after,
+    .toolbar_btn:hover:before {
+        display: none;
+    }
+
+    .editor_body {
+        min-height: 400px;
+        font-size: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .blog_textEditor_toolbar {
+        justify-content: flex-start;
+    }
+
+    .toolbar_btn_wrap {
+        margin-right: 5px;
+    }
+
+    .toolbar_break {
+        flex-basis: 100%;
+        height: 0;
+        margin: 0 !important;
+    }
+
+    .toolbar_btn {
+        font-size: 17px
+    }
+
+    .toolbar_btn:hover:after,
+    .toolbar_btn:hover:before {
+        display: none;
+    }
+
+    .editor_body {
+        min-height: 400px;
+        font-size: 18px !important;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .blog_textEditorWrapper {
+        max-width: 70%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .blog_textEditorWrapper {
+        max-width: 80%;
+    }
+}
+
+/* Media Query */
