@@ -10,6 +10,7 @@
 
         <!-- Meta tags -->
         <meta name="Description" CONTENT="Rich text editor using HTML, CSS and JS">
+        <meta name="creator" content="Debjeet Das">
 
         <!-- CSS -->
         <link href="./css/richText_editor.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel=" stylesheet">
