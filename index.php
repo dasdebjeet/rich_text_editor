@@ -85,8 +85,6 @@
                     <button class="toolbar_btn flex_c" data-cmd="insertOrderedList" tooltip="Ordered List"><i class="fal fa-list-ol"></i></button>
                 </div>
 
-                <!-- <div style="flex-basis: 100%;height: 0; margin: 0 !important;"></div> -->
-
                 <div class="toolbar_btn_wrap flex_c">
                     <button class="toolbar_btn flex_c" data-cmd="insertImage" tooltip="Insert Image" status="off"><i class="fal fa-image"></i></button>
                     <button class="toolbar_btn flex_c" data-cmd="createLink" tooltip="Create Link"><i class="fal fa-link"></i></button>
@@ -103,7 +101,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="toolbar_break"></div> -->
 
                 <div class="toolbar_btn flex_c" data-cmd="veiwCode" status="off" tooltip="HTML Code"><i class="fal fa-code"></i></div>
 
